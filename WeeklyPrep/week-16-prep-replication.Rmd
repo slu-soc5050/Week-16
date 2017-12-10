@@ -1,0 +1,59 @@
+---
+title: "Week 16 - Weekly Prep"
+author: "Christopher Prener, Ph.D."
+Date: "December 11, 2017"
+output: html_notebook
+---
+
+## Introduction
+This is the replication file for Week 16's weekly prep. The goal of this file is to review how to create one-way tables in `R`.
+
+## Dependencies
+This prep does not have any dependencies.
+
+## Load Data
+The data for this prep comes from the `ggplot2` package:
+
+```{r}
+library(ggplot2)
+autoData <- mpg
+```
+
+## Questions
+### Question 1
+The following code creates a frequency table for the variable `drv`:
+
+```{r}
+table(autoData$drv)
+```
+
+We can see that the modal category is for front wheel drive vehicles.
+
+### Question 2
+The following code creates a proportional frequency table for the variable `drv`:
+
+```{r}
+prop.table(table(autoData$drv))
+```
+
+We can see that the modal category, front wheel drive vehicles, makes up 45.299% of the observations.
+
+### Question 3
+The following code creates a frequency table for the variable `cyl`:
+
+```{r}
+table(autoData$cyl)
+```
+
+We can see that the modal category is for four cylinder engines.
+
+### Question 4
+The following code creates a proportional frequency table for the variable `cyl`:
+
+```{r}
+prop.table(table(autoData$cyl))
+```
+
+We can see that the modal category, four cylinder engines, makes up 34.615% of the observations.
+
+
