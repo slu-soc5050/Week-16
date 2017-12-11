@@ -1,0 +1,98 @@
+---
+title: "Week-16 Lab Replication"
+author: "Christopher Prener, Ph.D."
+date: "December 11, 2017"
+output: html_notebook
+---
+
+## Introduction
+This is the replication file for week 16's lab (the last lab of the semester! you made it!).
+
+## Dependencies
+This lab requires two packages (plus `stats`):
+
+```{r}
+library(dplyr)    # data wrangling
+library(janitor)  # data tables
+```
+
+## Load Data
+We'll use the `auto17` data from `testDriveR` for answering the lab's questions:
+
+```{r}
+library(testDriveR)
+autoData <- auto17
+```
+
+## Part 1 - Data Prepartion
+### Question 1
+The code below creates a vector with the names of the four major German automobile manufacturers included in these data:
+
+```{r}
+germanCars <- c("BMW", "Mercedes-Benz", "Porsche", "Volkswagen Group of Amerca")
+```
+
+### Questions 2 and 3
+We can reference the vector `germanCars` we created above to make a logical variable that is `TRUE` if the manufacturer is German and otherwise is `FALSE`. Note how we use in the `%in%` operator to make this happen. We'll also subset the variables to make a smaller data frame:
+
+```{r}
+autoData %>% 
+  mutate(gerCars = ifelse(mfr %in% germanCars, TRUE, FALSE)) %>%
+  select(id, gerCars, driveStr) -> autoSub
+```
+
+## Part 2 - Tables
+### Question 4
+The code below creates a nicely formatted frequency table for the logical variable created in question 2. We'll add a total row (a total column wouldn't really make sense here) and make sure the percentages are properly formatted:
+
+```{r}
+autoSub %>%
+  tabyl(gerCars) %>%
+  adorn_totals(where = "row") %>%
+  adorn_pct_formatting(digits = 3)
+```
+
+The modal category is `FALSE`, which makes sense - the majority of vehicles sold for model year 2017 are not German vehicles. Surprisingly, however, they do make up a fifth of the vehicles on the market!
+
+### Question 5
+Next, we'll make a two-way contingency table that shows the breakdown of drivetain types by German vehicle status. We'll use row percents here, which will clarify the percent of German/non-German vehicles that have particular types of drivetrains.
+
+```{r}
+autoSub %>%
+  tabyl(gerCars, driveStr) %>%
+  adorn_totals(where = c("row", "col")) %>%
+  adorn_percentages(denominator = "row") %>%
+  adorn_pct_formatting(digits = 3) %>%
+  adorn_ns(position = "front")
+```
+
+The biggest differences here, proportionally speaking, is that a much larger share of German vehicles have four-wheel drive and rear-wheel drive than non-German vehicles. 
+
+## Part 3 - Chi-Squared
+### Question 6
+The code below fits a chi-squared model to our data:
+
+```{r}
+chisq.test(autoSub$gerCars, autoSub$driveStr)
+```
+
+The results of the chi-squared ($\chi^2= 119.62, df = 4, p <.001$) suggest that the variation we noted in the contingency is indeed meaningful.
+
+### Question 7
+The code below checks to see if our model above meets Cochran conditions assumption by saving the model results to an object and then extracting the expected frequencies:
+
+```{r}
+model <- chisq.test(autoSub$gerCars, autoSub$driveStr)
+model$expected
+```
+
+We do not have any cells with fewer than 5 observations, so we meet Cochran's conditions.
+
+### Question 8
+Despite this, we'll fit a Fisher's Exact Test for practice:
+
+```{r}
+fisher.test(autoSub$gerCars, autoSub$driveStr, simulate.p.value = TRUE)
+```
+
+This provides us with an alternative p-value that is robust to violations of the Cochran conditions assumption for chi-squared tests.
