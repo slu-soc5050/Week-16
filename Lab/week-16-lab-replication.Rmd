@@ -29,7 +29,7 @@ autoData <- auto17
 The code below creates a vector with the names of the four major German automobile manufacturers included in these data:
 
 ```{r}
-germanCars <- c("BMW", "Mercedes-Benz", "Porsche", "Volkswagen Group of Amerca")
+germanCars <- c("BMW", "Mercedes-Benz", "Porsche", "Volkswagen Group of America")
 ```
 
 ### Questions 2 and 3
@@ -52,7 +52,7 @@ autoSub %>%
   adorn_pct_formatting(digits = 3)
 ```
 
-The modal category is `FALSE`, which makes sense - the majority of vehicles sold for model year 2017 are not German vehicles. Surprisingly, however, they do make up a fifth of the vehicles on the market!
+The modal category is `FALSE`, which makes sense - the majority of vehicles sold for model year 2017 are not German vehicles. Surprisingly, however, they do make up more tha a quarter of the vehicles on the market!
 
 ### Question 5
 Next, we'll make a two-way contingency table that shows the breakdown of drivetain types by German vehicle status. We'll use row percents here, which will clarify the percent of German/non-German vehicles that have particular types of drivetrains.
@@ -66,7 +66,7 @@ autoSub %>%
   adorn_ns(position = "front")
 ```
 
-The biggest differences here, proportionally speaking, is that a much larger share of German vehicles have four-wheel drive and rear-wheel drive than non-German vehicles. 
+The biggest differences here, proportionally speaking, is that a much larger share of German vehicles have four-wheel drive, all-wheel drive, and rear-wheel drive than non-German vehicles. 
 
 ## Part 3 - Chi-Squared
 ### Question 6
@@ -76,7 +76,7 @@ The code below fits a chi-squared model to our data:
 chisq.test(autoSub$gerCars, autoSub$driveStr)
 ```
 
-The results of the chi-squared ($\chi^2= 119.62, df = 4, p <.001$) suggest that the variation we noted in the contingency is indeed meaningful.
+The results of the chi-squared ($\chi^2= 91.071, df = 4, p <.001$) suggest that the variation we noted in the contingency is indeed meaningful.
 
 ### Question 7
 The code below checks to see if our model above meets Cochran conditions assumption by saving the model results to an object and then extracting the expected frequencies:

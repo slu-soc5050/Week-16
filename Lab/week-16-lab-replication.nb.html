@@ -212,8 +212,8 @@ autoData &lt;- auto17</code></pre>
 <p>The code below creates a vector with the names of the four major German automobile manufacturers included in these data:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2VybWFuQ2FycyA8LSBjKFwiQk1XXCIsIFwiTWVyY2VkZXMtQmVuelwiLCBcIlBvcnNjaGVcIiwgXCJWb2xrc3dhZ2VuIEdyb3VwIG9mIEFtZXJjYVwiKVxuYGBgIn0= -->
-<pre class="r"><code>germanCars &lt;- c(&quot;BMW&quot;, &quot;Mercedes-Benz&quot;, &quot;Porsche&quot;, &quot;Volkswagen Group of Amerca&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2VybWFuQ2FycyA8LSBjKFwiQk1XXCIsIFwiTWVyY2VkZXMtQmVuelwiLCBcIlBvcnNjaGVcIiwgXCJWb2xrc3dhZ2VuIEdyb3VwIG9mIEFtZXJpY2FcIilcbmBgYCJ9 -->
+<pre class="r"><code>germanCars &lt;- c(&quot;BMW&quot;, &quot;Mercedes-Benz&quot;, &quot;Porsche&quot;, &quot;Volkswagen Group of America&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -245,15 +245,15 @@ autoData &lt;- auto17</code></pre>
   adorn_totals(where = &quot;row&quot;) %&gt;%
   adorn_pct_formatting(digits = 3)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIGdlckNhcnMgICAgbiAgcGVyY2VudFxuICAgRkFMU0UgIDk1MyAgNzguMzcyJVxuICAgIFRSVUUgIDI2MyAgMjEuNjI4JVxuICAgVG90YWwgMTIxNiAxMDAuMDAwJVxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiIGdlckNhcnMgICAgbiAgcGVyY2VudFxuICAgRkFMU0UgIDg2OSAgNzEuNDY0JVxuICAgIFRSVUUgIDM0NyAgMjguNTM2JVxuICAgVG90YWwgMTIxNiAxMDAuMDAwJVxuIn0= -->
 <pre><code> gerCars    n  percent
-   FALSE  953  78.372%
-    TRUE  263  21.628%
+   FALSE  869  71.464%
+    TRUE  347  28.536%
    Total 1216 100.000%</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>The modal category is <code>FALSE</code>, which makes sense - the majority of vehicles sold for model year 2017 are not German vehicles. Surprisingly, however, they do make up a fifth of the vehicles on the market!</p>
+<p>The modal category is <code>FALSE</code>, which makes sense - the majority of vehicles sold for model year 2017 are not German vehicles. Surprisingly, however, they do make up more tha a quarter of the vehicles on the market!</p>
 </div>
 <div id="question-5" class="section level3">
 <h3>Question 5</h3>
@@ -268,15 +268,15 @@ autoData &lt;- auto17</code></pre>
   adorn_pct_formatting(digits = 3) %&gt;%
   adorn_ns(position = &quot;front&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiIGdlckNhcnMgICAgICAgICAgICAgNCAgICAgICAgICAgICBBICAgICAgICAgICAgIEYgICAgICAgICAgIFAgICAgICAgICAgICAgUiAgICAgICAgICAgVG90YWxcbiAgIEZBTFNFICA3MyAgKDcuNjYwJSkgMjU2ICgyNi44NjMlKSAzNTQgKDM3LjE0NiUpIDM0ICgzLjU2OCUpIDIzNiAoMjQuNzY0JSkgIDk1MyAoMTAwLjAwMCUpXG4gICAgVFJVRSAgNjEgKDIzLjE5NCUpICA3MiAoMjcuMzc2JSkgIDI2ICAoOS44ODYlKSAgMCAoMC4wMDAlKSAxMDQgKDM5LjU0NCUpICAyNjMgKDEwMC4wMDAlKVxuICAgVG90YWwgMTM0ICgxMS4wMjAlKSAzMjggKDI2Ljk3NCUpIDM4MCAoMzEuMjUwJSkgMzQgKDIuNzk2JSkgMzQwICgyNy45NjElKSAxMjE2ICgxMDAuMDAwJSlcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiIGdlckNhcnMgICAgICAgICAgICAgNCAgICAgICAgICAgICBBICAgICAgICAgICAgIEYgICAgICAgICAgIFAgICAgICAgICAgICAgUiAgICAgICAgICAgVG90YWxcbiAgIEZBTFNFICA3MyAgKDguNDAwJSkgMjAyICgyMy4yNDUlKSAzMjggKDM3Ljc0NSUpIDM0ICgzLjkxMyUpIDIzMiAoMjYuNjk3JSkgIDg2OSAoMTAwLjAwMCUpXG4gICAgVFJVRSAgNjEgKDE3LjU3OSUpIDEyNiAoMzYuMzExJSkgIDUyICgxNC45ODYlKSAgMCAoMC4wMDAlKSAxMDggKDMxLjEyNCUpICAzNDcgKDEwMC4wMDAlKVxuICAgVG90YWwgMTM0ICgxMS4wMjAlKSAzMjggKDI2Ljk3NCUpIDM4MCAoMzEuMjUwJSkgMzQgKDIuNzk2JSkgMzQwICgyNy45NjElKSAxMjE2ICgxMDAuMDAwJSlcbiJ9 -->
 <pre><code> gerCars             4             A             F           P             R           Total
-   FALSE  73  (7.660%) 256 (26.863%) 354 (37.146%) 34 (3.568%) 236 (24.764%)  953 (100.000%)
-    TRUE  61 (23.194%)  72 (27.376%)  26  (9.886%)  0 (0.000%) 104 (39.544%)  263 (100.000%)
+   FALSE  73  (8.400%) 202 (23.245%) 328 (37.745%) 34 (3.913%) 232 (26.697%)  869 (100.000%)
+    TRUE  61 (17.579%) 126 (36.311%)  52 (14.986%)  0 (0.000%) 108 (31.124%)  347 (100.000%)
    Total 134 (11.020%) 328 (26.974%) 380 (31.250%) 34 (2.796%) 340 (27.961%) 1216 (100.000%)</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>The biggest differences here, proportionally speaking, is that a much larger share of German vehicles have four-wheel drive and rear-wheel drive than non-German vehicles.</p>
+<p>The biggest differences here, proportionally speaking, is that a much larger share of German vehicles have four-wheel drive, all-wheel drive, and rear-wheel drive than non-German vehicles.</p>
 </div>
 </div>
 <div id="part-3---chi-squared" class="section level2">
@@ -289,16 +289,16 @@ autoData &lt;- auto17</code></pre>
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hpc3EudGVzdChhdXRvU3ViJGdlckNhcnMsIGF1dG9TdWIkZHJpdmVTdHIpXG5gYGAifQ== -->
 <pre class="r"><code>chisq.test(autoSub$gerCars, autoSub$driveStr)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5cdFBlYXJzb24ncyBDaGktc3F1YXJlZCB0ZXN0XG5cbmRhdGE6ICBhdXRvU3ViJGdlckNhcnMgYW5kIGF1dG9TdWIkZHJpdmVTdHJcblgtc3F1YXJlZCA9IDExOS42NSwgZGYgPSA0LCBwLXZhbHVlIDwgMi4yZS0xNlxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5cdFBlYXJzb24ncyBDaGktc3F1YXJlZCB0ZXN0XG5cbmRhdGE6ICBhdXRvU3ViJGdlckNhcnMgYW5kIGF1dG9TdWIkZHJpdmVTdHJcblgtc3F1YXJlZCA9IDkxLjA3MSwgZGYgPSA0LCBwLXZhbHVlIDwgMi4yZS0xNlxuIn0= -->
 <pre><code>
     Pearson's Chi-squared test
 
 data:  autoSub$gerCars and autoSub$driveStr
-X-squared = 119.65, df = 4, p-value &lt; 2.2e-16</code></pre>
+X-squared = 91.071, df = 4, p-value &lt; 2.2e-16</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>The results of the chi-squared (<span class="math inline">\(\chi^2= 119.62, df = 4, p &lt;.001\)</span>) suggest that the variation we noted in the contingency is indeed meaningful.</p>
+<p>The results of the chi-squared (<span class="math inline">\(\chi^2= 91.071, df = 4, p &lt;.001\)</span>) suggest that the variation we noted in the contingency is indeed meaningful.</p>
 </div>
 <div id="question-7" class="section level3">
 <h3>Question 7</h3>
@@ -309,11 +309,11 @@ X-squared = 119.65, df = 4, p-value &lt; 2.2e-16</code></pre>
 <pre class="r"><code>model &lt;- chisq.test(autoSub$gerCars, autoSub$driveStr)
 model$expected</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgYXV0b1N1YiRkcml2ZVN0clxuYXV0b1N1YiRnZXJDYXJzICAgICAgICAgNCAgICAgICAgIEEgICAgICAgIEYgICAgICAgICBQICAgICAgICAgUlxuICAgICAgICAgIEZBTFNFIDEwNS4wMTgwOSAyNTcuMDU5MjEgMjk3LjgxMjUgMjYuNjQ2MzgyIDI2Ni40NjM4MlxuICAgICAgICAgIFRSVUUgICAyOC45ODE5MSAgNzAuOTQwNzkgIDgyLjE4NzUgIDcuMzUzNjE4ICA3My41MzYxOFxuIn0= -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgICAgICAgICAgYXV0b1N1YiRkcml2ZVN0clxuYXV0b1N1YiRnZXJDYXJzICAgICAgICA0ICAgICAgICAgQSAgICAgICAgRiAgICAgICAgIFAgICAgICAgICBSXG4gICAgICAgICAgRkFMU0UgOTUuNzYxNTEgMjM0LjQwMTMyIDI3MS41NjI1IDI0LjI5NzY5NyAyNDIuOTc2OTdcbiAgICAgICAgICBUUlVFICAzOC4yMzg0OSAgOTMuNTk4NjggMTA4LjQzNzUgIDkuNzAyMzAzICA5Ny4wMjMwM1xuIn0= -->
 <pre><code>               autoSub$driveStr
-autoSub$gerCars         4         A        F         P         R
-          FALSE 105.01809 257.05921 297.8125 26.646382 266.46382
-          TRUE   28.98191  70.94079  82.1875  7.353618  73.53618</code></pre>
+autoSub$gerCars        4         A        F         P         R
+          FALSE 95.76151 234.40132 271.5625 24.297697 242.97697
+          TRUE  38.23849  93.59868 108.4375  9.702303  97.02303</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -342,7 +342,7 @@ alternative hypothesis: two.sided</code></pre>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2Vlay0xNiBMYWIgUmVwbGljYXRpb24iCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICJEZWNlbWJlciAxMSwgMjAxNyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgSW50cm9kdWN0aW9uClRoaXMgaXMgdGhlIHJlcGxpY2F0aW9uIGZpbGUgZm9yIHdlZWsgMTYncyBsYWIgKHRoZSBsYXN0IGxhYiBvZiB0aGUgc2VtZXN0ZXIhIHlvdSBtYWRlIGl0ISkuCgojIyBEZXBlbmRlbmNpZXMKVGhpcyBsYWIgcmVxdWlyZXMgdHdvIHBhY2thZ2VzIChwbHVzIGBzdGF0c2ApOgoKYGBge3J9CmxpYnJhcnkoZHBseXIpICAgICMgZGF0YSB3cmFuZ2xpbmcKbGlicmFyeShqYW5pdG9yKSAgIyBkYXRhIHRhYmxlcwpgYGAKCiMjIExvYWQgRGF0YQpXZSdsbCB1c2UgdGhlIGBhdXRvMTdgIGRhdGEgZnJvbSBgdGVzdERyaXZlUmAgZm9yIGFuc3dlcmluZyB0aGUgbGFiJ3MgcXVlc3Rpb25zOgoKYGBge3J9CmxpYnJhcnkodGVzdERyaXZlUikKYXV0b0RhdGEgPC0gYXV0bzE3CmBgYAoKIyMgUGFydCAxIC0gRGF0YSBQcmVwYXJ0aW9uCiMjIyBRdWVzdGlvbiAxClRoZSBjb2RlIGJlbG93IGNyZWF0ZXMgYSB2ZWN0b3Igd2l0aCB0aGUgbmFtZXMgb2YgdGhlIGZvdXIgbWFqb3IgR2VybWFuIGF1dG9tb2JpbGUgbWFudWZhY3R1cmVycyBpbmNsdWRlZCBpbiB0aGVzZSBkYXRhOgoKYGBge3J9Cmdlcm1hbkNhcnMgPC0gYygiQk1XIiwgIk1lcmNlZGVzLUJlbnoiLCAiUG9yc2NoZSIsICJWb2xrc3dhZ2VuIEdyb3VwIG9mIEFtZXJjYSIpCmBgYAoKIyMjIFF1ZXN0aW9ucyAyIGFuZCAzCldlIGNhbiByZWZlcmVuY2UgdGhlIHZlY3RvciBgZ2VybWFuQ2Fyc2Agd2UgY3JlYXRlZCBhYm92ZSB0byBtYWtlIGEgbG9naWNhbCB2YXJpYWJsZSB0aGF0IGlzIGBUUlVFYCBpZiB0aGUgbWFudWZhY3R1cmVyIGlzIEdlcm1hbiBhbmQgb3RoZXJ3aXNlIGlzIGBGQUxTRWAuIE5vdGUgaG93IHdlIHVzZSBpbiB0aGUgYCVpbiVgIG9wZXJhdG9yIHRvIG1ha2UgdGhpcyBoYXBwZW4uIFdlJ2xsIGFsc28gc3Vic2V0IHRoZSB2YXJpYWJsZXMgdG8gbWFrZSBhIHNtYWxsZXIgZGF0YSBmcmFtZToKCmBgYHtyfQphdXRvRGF0YSAlPiUgCiAgbXV0YXRlKGdlckNhcnMgPSBpZmVsc2UobWZyICVpbiUgZ2VybWFuQ2FycywgVFJVRSwgRkFMU0UpKSAlPiUKICBzZWxlY3QoaWQsIGdlckNhcnMsIGRyaXZlU3RyKSAtPiBhdXRvU3ViCmBgYAoKIyMgUGFydCAyIC0gVGFibGVzCiMjIyBRdWVzdGlvbiA0ClRoZSBjb2RlIGJlbG93IGNyZWF0ZXMgYSBuaWNlbHkgZm9ybWF0dGVkIGZyZXF1ZW5jeSB0YWJsZSBmb3IgdGhlIGxvZ2ljYWwgdmFyaWFibGUgY3JlYXRlZCBpbiBxdWVzdGlvbiAyLiBXZSdsbCBhZGQgYSB0b3RhbCByb3cgKGEgdG90YWwgY29sdW1uIHdvdWxkbid0IHJlYWxseSBtYWtlIHNlbnNlIGhlcmUpIGFuZCBtYWtlIHN1cmUgdGhlIHBlcmNlbnRhZ2VzIGFyZSBwcm9wZXJseSBmb3JtYXR0ZWQ6CgpgYGB7cn0KYXV0b1N1YiAlPiUKICB0YWJ5bChnZXJDYXJzKSAlPiUKICBhZG9ybl90b3RhbHMod2hlcmUgPSAicm93IikgJT4lCiAgYWRvcm5fcGN0X2Zvcm1hdHRpbmcoZGlnaXRzID0gMykKYGBgCgpUaGUgbW9kYWwgY2F0ZWdvcnkgaXMgYEZBTFNFYCwgd2hpY2ggbWFrZXMgc2Vuc2UgLSB0aGUgbWFqb3JpdHkgb2YgdmVoaWNsZXMgc29sZCBmb3IgbW9kZWwgeWVhciAyMDE3IGFyZSBub3QgR2VybWFuIHZlaGljbGVzLiBTdXJwcmlzaW5nbHksIGhvd2V2ZXIsIHRoZXkgZG8gbWFrZSB1cCBhIGZpZnRoIG9mIHRoZSB2ZWhpY2xlcyBvbiB0aGUgbWFya2V0IQoKIyMjIFF1ZXN0aW9uIDUKTmV4dCwgd2UnbGwgbWFrZSBhIHR3by13YXkgY29udGluZ2VuY3kgdGFibGUgdGhhdCBzaG93cyB0aGUgYnJlYWtkb3duIG9mIGRyaXZldGFpbiB0eXBlcyBieSBHZXJtYW4gdmVoaWNsZSBzdGF0dXMuIFdlJ2xsIHVzZSByb3cgcGVyY2VudHMgaGVyZSwgd2hpY2ggd2lsbCBjbGFyaWZ5IHRoZSBwZXJjZW50IG9mIEdlcm1hbi9ub24tR2VybWFuIHZlaGljbGVzIHRoYXQgaGF2ZSBwYXJ0aWN1bGFyIHR5cGVzIG9mIGRyaXZldHJhaW5zLgoKYGBge3J9CmF1dG9TdWIgJT4lCiAgdGFieWwoZ2VyQ2FycywgZHJpdmVTdHIpICU+JQogIGFkb3JuX3RvdGFscyh3aGVyZSA9IGMoInJvdyIsICJjb2wiKSkgJT4lCiAgYWRvcm5fcGVyY2VudGFnZXMoZGVub21pbmF0b3IgPSAicm93IikgJT4lCiAgYWRvcm5fcGN0X2Zvcm1hdHRpbmcoZGlnaXRzID0gMykgJT4lCiAgYWRvcm5fbnMocG9zaXRpb24gPSAiZnJvbnQiKQpgYGAKClRoZSBiaWdnZXN0IGRpZmZlcmVuY2VzIGhlcmUsIHByb3BvcnRpb25hbGx5IHNwZWFraW5nLCBpcyB0aGF0IGEgbXVjaCBsYXJnZXIgc2hhcmUgb2YgR2VybWFuIHZlaGljbGVzIGhhdmUgZm91ci13aGVlbCBkcml2ZSBhbmQgcmVhci13aGVlbCBkcml2ZSB0aGFuIG5vbi1HZXJtYW4gdmVoaWNsZXMuIAoKIyMgUGFydCAzIC0gQ2hpLVNxdWFyZWQKIyMjIFF1ZXN0aW9uIDYKVGhlIGNvZGUgYmVsb3cgZml0cyBhIGNoaS1zcXVhcmVkIG1vZGVsIHRvIG91ciBkYXRhOgoKYGBge3J9CmNoaXNxLnRlc3QoYXV0b1N1YiRnZXJDYXJzLCBhdXRvU3ViJGRyaXZlU3RyKQpgYGAKClRoZSByZXN1bHRzIG9mIHRoZSBjaGktc3F1YXJlZCAoJFxjaGleMj0gMTE5LjYyLCBkZiA9IDQsIHAgPC4wMDEkKSBzdWdnZXN0IHRoYXQgdGhlIHZhcmlhdGlvbiB3ZSBub3RlZCBpbiB0aGUgY29udGluZ2VuY3kgaXMgaW5kZWVkIG1lYW5pbmdmdWwuCgojIyMgUXVlc3Rpb24gNwpUaGUgY29kZSBiZWxvdyBjaGVja3MgdG8gc2VlIGlmIG91ciBtb2RlbCBhYm92ZSBtZWV0cyBDb2NocmFuIGNvbmRpdGlvbnMgYXNzdW1wdGlvbiBieSBzYXZpbmcgdGhlIG1vZGVsIHJlc3VsdHMgdG8gYW4gb2JqZWN0IGFuZCB0aGVuIGV4dHJhY3RpbmcgdGhlIGV4cGVjdGVkIGZyZXF1ZW5jaWVzOgoKYGBge3J9Cm1vZGVsIDwtIGNoaXNxLnRlc3QoYXV0b1N1YiRnZXJDYXJzLCBhdXRvU3ViJGRyaXZlU3RyKQptb2RlbCRleHBlY3RlZApgYGAKCldlIGRvIG5vdCBoYXZlIGFueSBjZWxscyB3aXRoIGZld2VyIHRoYW4gNSBvYnNlcnZhdGlvbnMsIHNvIHdlIG1lZXQgQ29jaHJhbidzIGNvbmRpdGlvbnMuCgojIyMgUXVlc3Rpb24gOApEZXNwaXRlIHRoaXMsIHdlJ2xsIGZpdCBhIEZpc2hlcidzIEV4YWN0IFRlc3QgZm9yIHByYWN0aWNlOgoKYGBge3J9CmZpc2hlci50ZXN0KGF1dG9TdWIkZ2VyQ2FycywgYXV0b1N1YiRkcml2ZVN0ciwgc2ltdWxhdGUucC52YWx1ZSA9IFRSVUUpCmBgYAoKVGhpcyBwcm92aWRlcyB1cyB3aXRoIGFuIGFsdGVybmF0aXZlIHAtdmFsdWUgdGhhdCBpcyByb2J1c3QgdG8gdmlvbGF0aW9ucyBvZiB0aGUgQ29jaHJhbiBjb25kaXRpb25zIGFzc3VtcHRpb24gZm9yIGNoaS1zcXVhcmVkIHRlc3RzLgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiV2Vlay0xNiBMYWIgUmVwbGljYXRpb24iCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICJEZWNlbWJlciAxMSwgMjAxNyIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyMgSW50cm9kdWN0aW9uClRoaXMgaXMgdGhlIHJlcGxpY2F0aW9uIGZpbGUgZm9yIHdlZWsgMTYncyBsYWIgKHRoZSBsYXN0IGxhYiBvZiB0aGUgc2VtZXN0ZXIhIHlvdSBtYWRlIGl0ISkuCgojIyBEZXBlbmRlbmNpZXMKVGhpcyBsYWIgcmVxdWlyZXMgdHdvIHBhY2thZ2VzIChwbHVzIGBzdGF0c2ApOgoKYGBge3J9CmxpYnJhcnkoZHBseXIpICAgICMgZGF0YSB3cmFuZ2xpbmcKbGlicmFyeShqYW5pdG9yKSAgIyBkYXRhIHRhYmxlcwpgYGAKCiMjIExvYWQgRGF0YQpXZSdsbCB1c2UgdGhlIGBhdXRvMTdgIGRhdGEgZnJvbSBgdGVzdERyaXZlUmAgZm9yIGFuc3dlcmluZyB0aGUgbGFiJ3MgcXVlc3Rpb25zOgoKYGBge3J9CmxpYnJhcnkodGVzdERyaXZlUikKYXV0b0RhdGEgPC0gYXV0bzE3CmBgYAoKIyMgUGFydCAxIC0gRGF0YSBQcmVwYXJ0aW9uCiMjIyBRdWVzdGlvbiAxClRoZSBjb2RlIGJlbG93IGNyZWF0ZXMgYSB2ZWN0b3Igd2l0aCB0aGUgbmFtZXMgb2YgdGhlIGZvdXIgbWFqb3IgR2VybWFuIGF1dG9tb2JpbGUgbWFudWZhY3R1cmVycyBpbmNsdWRlZCBpbiB0aGVzZSBkYXRhOgoKYGBge3J9Cmdlcm1hbkNhcnMgPC0gYygiQk1XIiwgIk1lcmNlZGVzLUJlbnoiLCAiUG9yc2NoZSIsICJWb2xrc3dhZ2VuIEdyb3VwIG9mIEFtZXJpY2EiKQpgYGAKCiMjIyBRdWVzdGlvbnMgMiBhbmQgMwpXZSBjYW4gcmVmZXJlbmNlIHRoZSB2ZWN0b3IgYGdlcm1hbkNhcnNgIHdlIGNyZWF0ZWQgYWJvdmUgdG8gbWFrZSBhIGxvZ2ljYWwgdmFyaWFibGUgdGhhdCBpcyBgVFJVRWAgaWYgdGhlIG1hbnVmYWN0dXJlciBpcyBHZXJtYW4gYW5kIG90aGVyd2lzZSBpcyBgRkFMU0VgLiBOb3RlIGhvdyB3ZSB1c2UgaW4gdGhlIGAlaW4lYCBvcGVyYXRvciB0byBtYWtlIHRoaXMgaGFwcGVuLiBXZSdsbCBhbHNvIHN1YnNldCB0aGUgdmFyaWFibGVzIHRvIG1ha2UgYSBzbWFsbGVyIGRhdGEgZnJhbWU6CgpgYGB7cn0KYXV0b0RhdGEgJT4lIAogIG11dGF0ZShnZXJDYXJzID0gaWZlbHNlKG1mciAlaW4lIGdlcm1hbkNhcnMsIFRSVUUsIEZBTFNFKSkgJT4lCiAgc2VsZWN0KGlkLCBnZXJDYXJzLCBkcml2ZVN0cikgLT4gYXV0b1N1YgpgYGAKCiMjIFBhcnQgMiAtIFRhYmxlcwojIyMgUXVlc3Rpb24gNApUaGUgY29kZSBiZWxvdyBjcmVhdGVzIGEgbmljZWx5IGZvcm1hdHRlZCBmcmVxdWVuY3kgdGFibGUgZm9yIHRoZSBsb2dpY2FsIHZhcmlhYmxlIGNyZWF0ZWQgaW4gcXVlc3Rpb24gMi4gV2UnbGwgYWRkIGEgdG90YWwgcm93IChhIHRvdGFsIGNvbHVtbiB3b3VsZG4ndCByZWFsbHkgbWFrZSBzZW5zZSBoZXJlKSBhbmQgbWFrZSBzdXJlIHRoZSBwZXJjZW50YWdlcyBhcmUgcHJvcGVybHkgZm9ybWF0dGVkOgoKYGBge3J9CmF1dG9TdWIgJT4lCiAgdGFieWwoZ2VyQ2FycykgJT4lCiAgYWRvcm5fdG90YWxzKHdoZXJlID0gInJvdyIpICU+JQogIGFkb3JuX3BjdF9mb3JtYXR0aW5nKGRpZ2l0cyA9IDMpCmBgYAoKVGhlIG1vZGFsIGNhdGVnb3J5IGlzIGBGQUxTRWAsIHdoaWNoIG1ha2VzIHNlbnNlIC0gdGhlIG1ham9yaXR5IG9mIHZlaGljbGVzIHNvbGQgZm9yIG1vZGVsIHllYXIgMjAxNyBhcmUgbm90IEdlcm1hbiB2ZWhpY2xlcy4gU3VycHJpc2luZ2x5LCBob3dldmVyLCB0aGV5IGRvIG1ha2UgdXAgbW9yZSB0aGEgYSBxdWFydGVyIG9mIHRoZSB2ZWhpY2xlcyBvbiB0aGUgbWFya2V0IQoKIyMjIFF1ZXN0aW9uIDUKTmV4dCwgd2UnbGwgbWFrZSBhIHR3by13YXkgY29udGluZ2VuY3kgdGFibGUgdGhhdCBzaG93cyB0aGUgYnJlYWtkb3duIG9mIGRyaXZldGFpbiB0eXBlcyBieSBHZXJtYW4gdmVoaWNsZSBzdGF0dXMuIFdlJ2xsIHVzZSByb3cgcGVyY2VudHMgaGVyZSwgd2hpY2ggd2lsbCBjbGFyaWZ5IHRoZSBwZXJjZW50IG9mIEdlcm1hbi9ub24tR2VybWFuIHZlaGljbGVzIHRoYXQgaGF2ZSBwYXJ0aWN1bGFyIHR5cGVzIG9mIGRyaXZldHJhaW5zLgoKYGBge3J9CmF1dG9TdWIgJT4lCiAgdGFieWwoZ2VyQ2FycywgZHJpdmVTdHIpICU+JQogIGFkb3JuX3RvdGFscyh3aGVyZSA9IGMoInJvdyIsICJjb2wiKSkgJT4lCiAgYWRvcm5fcGVyY2VudGFnZXMoZGVub21pbmF0b3IgPSAicm93IikgJT4lCiAgYWRvcm5fcGN0X2Zvcm1hdHRpbmcoZGlnaXRzID0gMykgJT4lCiAgYWRvcm5fbnMocG9zaXRpb24gPSAiZnJvbnQiKQpgYGAKClRoZSBiaWdnZXN0IGRpZmZlcmVuY2VzIGhlcmUsIHByb3BvcnRpb25hbGx5IHNwZWFraW5nLCBpcyB0aGF0IGEgbXVjaCBsYXJnZXIgc2hhcmUgb2YgR2VybWFuIHZlaGljbGVzIGhhdmUgZm91ci13aGVlbCBkcml2ZSwgYWxsLXdoZWVsIGRyaXZlLCBhbmQgcmVhci13aGVlbCBkcml2ZSB0aGFuIG5vbi1HZXJtYW4gdmVoaWNsZXMuIAoKIyMgUGFydCAzIC0gQ2hpLVNxdWFyZWQKIyMjIFF1ZXN0aW9uIDYKVGhlIGNvZGUgYmVsb3cgZml0cyBhIGNoaS1zcXVhcmVkIG1vZGVsIHRvIG91ciBkYXRhOgoKYGBge3J9CmNoaXNxLnRlc3QoYXV0b1N1YiRnZXJDYXJzLCBhdXRvU3ViJGRyaXZlU3RyKQpgYGAKClRoZSByZXN1bHRzIG9mIHRoZSBjaGktc3F1YXJlZCAoJFxjaGleMj0gOTEuMDcxLCBkZiA9IDQsIHAgPC4wMDEkKSBzdWdnZXN0IHRoYXQgdGhlIHZhcmlhdGlvbiB3ZSBub3RlZCBpbiB0aGUgY29udGluZ2VuY3kgaXMgaW5kZWVkIG1lYW5pbmdmdWwuCgojIyMgUXVlc3Rpb24gNwpUaGUgY29kZSBiZWxvdyBjaGVja3MgdG8gc2VlIGlmIG91ciBtb2RlbCBhYm92ZSBtZWV0cyBDb2NocmFuIGNvbmRpdGlvbnMgYXNzdW1wdGlvbiBieSBzYXZpbmcgdGhlIG1vZGVsIHJlc3VsdHMgdG8gYW4gb2JqZWN0IGFuZCB0aGVuIGV4dHJhY3RpbmcgdGhlIGV4cGVjdGVkIGZyZXF1ZW5jaWVzOgoKYGBge3J9Cm1vZGVsIDwtIGNoaXNxLnRlc3QoYXV0b1N1YiRnZXJDYXJzLCBhdXRvU3ViJGRyaXZlU3RyKQptb2RlbCRleHBlY3RlZApgYGAKCldlIGRvIG5vdCBoYXZlIGFueSBjZWxscyB3aXRoIGZld2VyIHRoYW4gNSBvYnNlcnZhdGlvbnMsIHNvIHdlIG1lZXQgQ29jaHJhbidzIGNvbmRpdGlvbnMuCgojIyMgUXVlc3Rpb24gOApEZXNwaXRlIHRoaXMsIHdlJ2xsIGZpdCBhIEZpc2hlcidzIEV4YWN0IFRlc3QgZm9yIHByYWN0aWNlOgoKYGBge3J9CmZpc2hlci50ZXN0KGF1dG9TdWIkZ2VyQ2FycywgYXV0b1N1YiRkcml2ZVN0ciwgc2ltdWxhdGUucC52YWx1ZSA9IFRSVUUpCmBgYAoKVGhpcyBwcm92aWRlcyB1cyB3aXRoIGFuIGFsdGVybmF0aXZlIHAtdmFsdWUgdGhhdCBpcyByb2J1c3QgdG8gdmlvbGF0aW9ucyBvZiB0aGUgQ29jaHJhbiBjb25kaXRpb25zIGFzc3VtcHRpb24gZm9yIGNoaS1zcXVhcmVkIHRlc3RzLgo=</div>
 
 
 
